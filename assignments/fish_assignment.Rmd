@@ -1,0 +1,29 @@
+---
+title: "Fish-activity"
+author: "Russell Fager"
+date: "March, 2023"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo =TRUE)
+
+library(tidyverse)
+library(purrr)
+```
+
+```{r}
+#need to use 'read.delim' to get the 'x' out of the data and make it a column header and not a data value.
+
+possible_fish = read.delim("fish.txt")
+head(possible_fish)
+```
+
+```{r}
+species_diversity(possible_fish)
+```
+
+
+
